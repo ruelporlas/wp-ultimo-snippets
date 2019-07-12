@@ -1,0 +1,6 @@
+function subsite_url_shortcode() {
+   $siteid = get_user_meta(get_current_user_id(), 'primary_blog', true);
+   $siteurl = get_site_url($siteid);
+return  $siteurl;
+}
+add_shortcode('subsite_url', 'subsite_url_shortcode');
