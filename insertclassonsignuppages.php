@@ -3,14 +3,18 @@
  */
 
 add_action('admin_print_footer_scripts', 'registration_steps_insertclass', 10);
+
 function registration_steps_insertclass() { ?>
 <script>
-	(function($) {
-		$(document).ready(function(){
-		   $( "theTargetElement" ).addClass( "yourClass" );
-  		   $( "theTargetElement2" ).addClass( "yourClass2" );
-		});
-	})(jQuery)
+
+(function($) {
+$(document).ready(function(){
+  $( ".wu-content-plan" ).parents('body').addClass( "wu-body-plan" );
+  $( ".wu-content-template" ).parents('body').addClass( "wu-body-template" );
+  $( ".wu-content-domain" ).parents('body').addClass( "wu-body-domain" );
+  $( ".wu-content-account" ).parents('body').addClass( "wu-body-account" );
+});
+})(jQuery)
 </script>
 <?php
 }
